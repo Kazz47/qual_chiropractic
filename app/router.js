@@ -6,10 +6,6 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
-    this.route("services", function(){
-        this.route("edit", { path: "/:photo_id" });
-    });
-    this.route("staff", function(){
-        this.route("edit", { path: "/:photo_id" });
-    });
+    this.route("services");
+    this.route("staff");
 });

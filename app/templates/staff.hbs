@@ -1,6 +1,12 @@
-<h1>Staff Page</h1>
-<ul>
-  {{#each photo in photos}}
-    <li>{{#link-to 'photos.edit' photo}}{{photo.title}}{{/link-to}}</li>
+<h1>Staff</h1>
+  {{#each person in controller}}
+    <ul>
+        {{#if person.photo}}
+            <li><img src={{person.photo}} alt="Image"></li>
+        {{/if}}
+        <li>{{person.fullName}}</li>
+        <li>{{person.bio}}</li>
+    </ul>
   {{/each}}
-</ul>
+
+Staff Members: {{staffCount}}
