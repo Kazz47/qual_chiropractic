@@ -1,4 +1,5 @@
 import Ember from 'ember';
+/* global moment */
 
 export default Ember.Controller.extend({
     fullName: function() {
@@ -11,6 +12,9 @@ export default Ember.Controller.extend({
     photo: function() {
         return this.get('model.photo');
     }.property('model.photo'),
+    startDate: function() {
+        return moment(this.get('model.startDate')).fromNow();
+    }.property('model.startDate'),
     bio: function() {
         return this.get('model.bio');
     }.property('model.bio')

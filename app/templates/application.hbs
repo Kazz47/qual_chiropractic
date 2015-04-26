@@ -1,14 +1,25 @@
-<header>
-<h1 id="title">Qual Chiropractic</h1>
-<p>{{#link-to "index" class="btn btn-default" role="button"}}Home{{/link-to}}</p>
-<p>{{#link-to "services" class="btn btn-default"}}Services{{/link-to}}</p>
-<p>{{#link-to "staff" class="btn btn-default"}}Staff{{/link-to}}</p>
-</header>
+<div class="wrapper">
+    <header>
+    <h1 id="title">Qual Chiropractic</h1>
+    <p>{{#link-to "index" class="btn btn-default" role="button"}}Home{{/link-to}}</p>
+    <p>{{#link-to "services" class="btn btn-default"}}Services{{/link-to}}</p>
+    <p>{{#link-to "staff" class="btn btn-default"}}Staff{{/link-to}}</p>
+    </header>
 
-<div>
-{{outlet}}
+    <div>
+    {{outlet}}
+    </div>
 </div>
 
-<footer>
-&copy; 2015 Qual Chiropractic
-</footer>
+<div class="footer">
+    <footer>
+        <div class="address"><address>
+            805 10th Street SE<br>
+            Jamestown ND, 58401<br>
+            (701) 252-4700
+        </address></div>
+        <div class="copy">
+            &copy; 2015 Qual Chiropractic
+        </div>
+    </footer>
+</div>

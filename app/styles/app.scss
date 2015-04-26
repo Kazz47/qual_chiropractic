@@ -1,0 +1,39 @@
+$primary_color: #300000;
+$light_text_color: #FFFFFF;
+$footer_size: 80px;
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: $footer_size;
+}
+
+div.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $footer_size;
+    line-height: $footer_size;
+    color: $light_text_color;
+    background-color: $primary_color;
+    text-align: center;
+
+    $padding: 30px;
+
+    address {
+        float: left;
+        padding-left: $padding;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    div.copy {
+        float: right;
+        padding-right: $padding;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
