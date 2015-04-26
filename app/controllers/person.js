@@ -1,5 +1,6 @@
 import Ember from 'ember';
 /* global moment */
+/* global Showdown */
 
 export default Ember.Controller.extend({
     fullName: function() {
@@ -16,6 +17,7 @@ export default Ember.Controller.extend({
         return moment(this.get('model.startDate')).fromNow();
     }.property('model.startDate'),
     bio: function() {
-        return this.get('model.bio');
+        var converter = new Showdown.converter();
+        return new Ember.Handlebars.SafeString(converter.makeHtml(this.get('model.bio')));
     }.property('model.bio')
 });

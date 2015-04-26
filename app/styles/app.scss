@@ -1,6 +1,8 @@
-$primary_color: #300000;
+$primary_color: #800000;
 $light_text_color: #FFFFFF;
+$navbar_size: 50px;
 $footer_size: 80px;
+$footer_top_margin: 20px;
 
 html {
     position: relative;
@@ -8,10 +10,13 @@ html {
 }
 
 body {
-    margin-bottom: $footer_size;
+    padding-top: $navbar_size;
+    margin-bottom: $footer_size + $footer_top_margin;
+    background-image: url("/assets/images/ricepaper2.png");
 }
 
 div.footer {
+    margin-top: $footer_top_margin;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -26,14 +31,12 @@ div.footer {
     address {
         float: left;
         padding-left: $padding;
-        display: inline-block;
-        vertical-align: middle;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     div.copy {
         float: right;
         padding-right: $padding;
-        display: inline-block;
-        vertical-align: middle;
     }
 }

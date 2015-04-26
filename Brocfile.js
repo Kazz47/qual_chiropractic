@@ -18,13 +18,16 @@ var app = new EmberApp();
 // along with the exports of each module as its value.
 
 // Bootstrap
-app.import('bower_components/bootstrap/dist/js/bootstrap.js');
-app.import('bower_components/bootstrap/dist/css/bootstrap.css');
-app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', {
+app.import('vendor/bootstrap/js/bootstrap.js');
+app.import('vendor/bootstrap/css/bootstrap.css');
+app.import('vendor/bootstrap/css/bootstrap.css.map', {
     destDir: 'assets'
 });
 
 // Moment
 app.import('bower_components/moment/moment.js');
+
+// Showdown
+app.import('bower_components/showdown/compressed/showdown.js');
 
 module.exports = app.toTree();

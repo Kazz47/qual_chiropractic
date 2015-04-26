@@ -1,13 +1,19 @@
-<h1>Staff</h1>
-  {{#each person in controller}}
-    <ul>
-        {{#if person.photo}}
-            <li><img src={{person.photo}} alt="Image"></li>
-        {{/if}}
-        <li>{{person.fullName}}</li>
-        <li>{{person.startDate}}</li>
-        <li>{{person.bio}}</li>
-    </ul>
-  {{/each}}
-
-Staff Members: {{staffCount}}
+<div class="container">
+    <h1>Staff</h1>
+    {{#each person in controller}}
+        <div class="well well-lg">
+            <div class="media">
+                {{#if person.photo}}
+                <div class="media-left">
+                    <img class="media-object img-rounded" src="{{person.photo}}" alt="{{person.fullName}}">
+                </div>
+                {{/if}}
+                <div class="media-body">
+                    <h4 class="media-heading">{{person.fullName}}</h4>
+                    <p>{{person.bio}}</p>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+    Staff Members: <span class="badge">{{staffCount}}</span>
+</div>

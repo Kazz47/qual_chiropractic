@@ -1,25 +1,59 @@
-<div class="wrapper">
-    <header>
-    <h1 id="title">Qual Chiropractic</h1>
-    <p>{{#link-to "index" class="btn btn-default" role="button"}}Home{{/link-to}}</p>
-    <p>{{#link-to "services" class="btn btn-default"}}Services{{/link-to}}</p>
-    <p>{{#link-to "staff" class="btn btn-default"}}Staff{{/link-to}}</p>
-    </header>
-
-    <div>
-    {{outlet}}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            {{#link-to "index" class="navbar-brand"}}Qual Chiropractic{{/link-to}}
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>{{#link-to "services"}}Services{{/link-to}}</li>
+                <li>{{#link-to "staff"}}Staff{{/link-to}}</li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!--
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" placeholder="Email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-success">Sign in</button>
+            </form>
+            -->
+        </div><!--/.navbar-collapse -->
     </div>
-</div>
+</nav>
 
+{{outlet}}
+
+<footer>
 <div class="footer">
-    <footer>
+    <div class="container">
         <div class="address"><address>
             805 10th Street SE<br>
             Jamestown ND, 58401<br>
             (701) 252-4700
         </address></div>
         <div class="copy">
-            &copy; 2015 Qual Chiropractic
+            &copy; {{year}} Qual Chiropractic
         </div>
-    </footer>
+    </div>
 </div>
+</footer>
