@@ -1,11 +1,31 @@
 <div class="jumbotron">
     <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <h1>Live Comfortably.</h1>
+        <p>Chiropractic Care is more than just making the pain go away, it is about learning and understanding how to take care of your body and improve your quality of living.</p>
+
+        <p>At Qual Chiropractic, we not only strive to help you feel better, we also aim to educate our patients about the benefits of chiropractic and other natural solutions to common health problems to motivate you to take a more active and responsible role in maintaining your health and your families well being.</p>
+
         <p>{{#link-to "index" class="btn btn-primary btn-lg" role="button"}}Learn more &raquo;{{/link-to}}</p>
     </div>
 </div>
 
 <div class="container">
+    <div class="col-md-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="2">Office Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each day in model}}
+                <tr>
+                    <td>{{day.name}}</td>
+                    <td>{{day.text}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
 {{outlet}}
 </div>

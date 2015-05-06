@@ -1,6 +1,6 @@
 $primary_color: #800000;
 $light_text_color: #FFFFFF;
-$navbar_size: 50px;
+$navbar_size: 80px;
 $footer_size: 80px;
 $footer_top_margin: 20px;
 
@@ -39,4 +39,10 @@ div.footer {
         float: right;
         padding-right: $padding;
     }
+}
+
+img.nav-logo {
+    padding-top: 8px;
+    height: $navbar_size - 10;
+    width: auto;
 }
